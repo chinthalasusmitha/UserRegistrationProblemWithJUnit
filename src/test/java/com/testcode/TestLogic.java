@@ -11,6 +11,7 @@ public class TestLogic {
         //        assertEquals("Pinky", UserRegistration.validFirstName("aaaa"));
         assertEquals("Pinky", UserRegistration.validFirstName("Pinky"));
         assertEquals("Reddy", UserRegistration.validLastName("Reddy"));
+        assertEquals("list", UserRegistration.validEmail("list"));
 
     }
 }
