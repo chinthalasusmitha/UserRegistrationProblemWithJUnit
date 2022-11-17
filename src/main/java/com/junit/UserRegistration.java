@@ -68,9 +68,27 @@ public class UserRegistration {
 
         return null;
     }
+    public static String validPhoneNumber(String phoneNumber){
+        boolean result = false;
+//        String phoneNumber = "+91 7995491772";
+        String regex = "[+91]+() +[789][0-9]{9}";
+        Pattern pattern = Pattern.compile(regex);
+        for (int i = 0; i < phoneNumber.length(); i++) {
+            Matcher matcher = pattern.matcher(phoneNumber);
+            result = matcher.matches();
+        }
+        System.out.println("\nThe phone number is: " + phoneNumber + " ==> " + result);
+
+
+    if (result == true) {
+
+        return phoneNumber;
     }
 
+        return null;
+    }
 
+}
 
 
 
