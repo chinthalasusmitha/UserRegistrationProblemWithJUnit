@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+//import static sun.net.www.http.KeepAliveCache.result;
+
 public class UserRegistration {
     static ArrayList<String> list = new ArrayList<>();
 
@@ -95,8 +97,6 @@ public class UserRegistration {
     public static String validPassword(String password) {
 //        UC-5 to UC-8 All were in this method Only
         boolean result = false;
-//        String password = "pInKy@123";
-//        String regex = "(^?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}";
         String regex = "(^.*(?=.{8,})(?=..*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).*$)";
         Pattern pattern = Pattern.compile(regex);
         for (int i = 0; i < password.length(); i++) {
@@ -112,7 +112,14 @@ public class UserRegistration {
         return null;
     }
 
+    public static String removingAddedMailId(String list) {
+        System.out.println(" \nAfter removing email : ");
+        System.out.println("\nlist after removing the added mail id : " + list);
 
-}
+        return list;
+    }
+
+
+    }
 
 

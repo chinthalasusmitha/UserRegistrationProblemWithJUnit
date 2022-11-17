@@ -14,6 +14,7 @@ public class TestLogic {
         assertEquals("list", UserRegistration.validEmail("list"));
         assertEquals("+91 7999171774", UserRegistration.validPhoneNumber("+91 7999171774"));
         assertEquals("pInKy@123", UserRegistration.validPassword("pInKy@123"));
+        assertEquals("list", UserRegistration.removingAddedMailId("list"));
 
 
     }
