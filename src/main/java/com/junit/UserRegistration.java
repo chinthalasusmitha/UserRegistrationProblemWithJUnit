@@ -15,6 +15,16 @@ public class UserRegistration {
 
         return null;
     }
+    public static String validLastName(String name) {
+        boolean result = validName(name);
+        System.out.println("Last name: " + name + " ==> " + result);
+        if (result == true) {
+
+            return name;
+        }
+
+        return null;
+    }
 
     private static boolean validName(String name) {
         boolean result = false;
