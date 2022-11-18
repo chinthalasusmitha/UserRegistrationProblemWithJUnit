@@ -8,12 +8,23 @@ import java.util.regex.Pattern;
 
 public class UserRegistration {
     static ArrayList<String> list = new ArrayList<>();
+    static int count = 0;
+    public static String ValidateUserEntry(String mood) {;
+        System.out.println("The Count : " + mood + " ==> " +count);
+        if(count==11) {
+            mood = "HAPPY";
+        }
+        else {
+            mood = "SAD";
+        }
+        return mood;
+    }
 
-    public static String validFirstName(String name) {
+    public static String validFirstName(String name)  {
         boolean result = validName(name);
         System.out.println("First name: " + name + " ==> " + result);
         if (result == true) {
-
+            count++;
             return name;
         }
 
@@ -24,7 +35,7 @@ public class UserRegistration {
         boolean result = validName(name);
         System.out.println("Last name: " + name + " ==> " + result);
         if (result == true) {
-
+            count++;
             return name;
         }
 
@@ -39,7 +50,7 @@ public class UserRegistration {
             Matcher matcher = pattern.matcher(name);
             result = matcher.matches();
         }
-
+        count++;
         return result;
     }
 
@@ -87,7 +98,7 @@ public class UserRegistration {
 
 
         if (result == true) {
-
+            count++;
             return phoneNumber;
         }
 
@@ -108,7 +119,7 @@ public class UserRegistration {
 
             return password;
         }
-
+        count++;
         return null;
     }
 
@@ -117,9 +128,10 @@ public class UserRegistration {
         System.out.println("\nlist after removing the added mail id : " + list);
 
         return list;
+
     }
 
 
-    }
+}
 
 
