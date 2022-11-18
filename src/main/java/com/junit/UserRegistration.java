@@ -63,9 +63,11 @@ public class UserRegistration {
         UserRegistration.list.add("abc.100@yahoo.com");
         UserRegistration.list.add("abc-100@abc.net");
         UserRegistration.list.add("abc.100@abc.com.au");
-        UserRegistration.list.add("abc@1.com");
+//        UserRegistration.list.add("abc@1.com");
         UserRegistration.list.add("abc@gmail.com.com");
         UserRegistration.list.add("abc+100@gmail.com");
+        UserRegistration.list.add("rocky1@gmail.com");
+        UserRegistration.list.add("pinky24@gmail.com");
 
         String regex = "^[a-z0-9+_.-]+@+[a-z]+.+[a-z]";
         Pattern pattern = Pattern.compile(regex);
